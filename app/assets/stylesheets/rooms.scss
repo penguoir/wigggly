@@ -1,0 +1,27 @@
+video {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+
+#settings {
+  border-top: 1px solid #e5e5e5;
+  margin-top: 1rem;
+  padding: 24px;
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      margin-right: 4px;
+    }
+  }
+
+  h2 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+}
+

@@ -1,0 +1,34 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <section>
+    <video id="video" controls>
+      <source src="<%= @room.video_url %>">
+    </video>
+  </section>
+
+  <section id="settings">
+    <h2 class="h3">Room controls</h2>
+
+    <h3 class="h4">Actions</h3>
+    <div class="btn-group w-100" role="group" aria-label="Basic example">
+      <button id="playpause" type="button" class="btn btn-light">
+        Play / Pause
+      </button>
+      <button id="sync" type="button" class="btn btn-light">
+        Sync everyone to me
+      </button>
+    </div>
+
+    <h3 class="h4 mt-4">Video settings</h3>
+    <%= form_with model: @room, id: 'video_settings_form' do |f| %>
+      <div class="form-group">
+        <label for="room_video_url">Video URL</label>
+        <%= f.text_field :video_url, value: @room.video_url, class: "form-control d-block" %>
+      </div>
+      <div class="form-group">
+        <%= f.submit "Update video", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </section>
+</div>
